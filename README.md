@@ -1,37 +1,36 @@
-# 8_Wifi NodeMCU Phone
+# 🚀 ESP8266 WiFi LED Control
 
-Turn on/off NodeMCU's built-in LED bulb by phone via connecting to Wi-Fi.
+A simple web server running on ESP8266 that lets you control an LED through a mobile-friendly web interface.
 
-Programming:
+## 📂 Hardware Requirements
 
-Copy the code above into src/main.cpp
-Edit the WiFi settings:
+- ESP8266 board (NodeMCU)
+- LED (optional - built-in LED will work)
+- 220Ω resistor (if using external LED)
+- Micro USB cable
 
-Change YOUR_WIFI_NAME to your WiFi network name
-Change YOUR_WIFI_PASSWORD to your WiFi password
+## 📂 Software Requirements
 
-Upload the code to your ESP8266
+- PlatformIO IDE
+- ESP8266 board support
+- WiFi network
 
-Testing:
+## 📂 Setup
 
-Open Serial Monitor at 115200 baud
-The ESP8266 will print its IP address after connecting
-On your iPhone:
+1. Clone this repository
+2. Open in PlatformIO
+3. Edit `main.cpp`:
+   - Replace `YOUR_WIFI_NAME` with your WiFi name
+   - Replace `YOUR_WIFI_PASSWORD` with your WiFi password
+4. Upload to your ESP8266
+5. Open Serial Monitor to get the IP address
+6. Access the web interface by entering the IP address in any browser
 
-Connect to the same WiFi network as the ESP8266
-Open Safari
-Enter the IP address shown in Serial Monitor
-You should see two buttons to control the LED
+## 📂 Files
 
-Common Issues & Solutions:
+- `main.cpp`: Contains the web server and LED control code
+- `platformio.ini`: PlatformIO configuration for ESP8266
 
-If it won't connect to WiFi:
+## 📂 Circuit
 
-Double-check WiFi name and password
-Make sure you're using 2.4GHz WiFi (ESP8266 doesn't support 5GHz)
-
-If the web page won't load:
-
-Verify your iPhone is on the same WiFi network
-Try refreshing the page
-Check the IP address in Serial Monitor
+Connect LED positive to GPIO2 (D4) and negative to GND through a 220Ω resistor. Or use the built-in LED on GPIO2.
