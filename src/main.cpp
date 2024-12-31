@@ -13,7 +13,7 @@ const int LED_PIN = 2;
 void setup()
 {
   // Serial.begin(115200);
-  Serial.begin(9600);
+  Serial.begin(9600); // if u got a garbled output, then change this "9600" to "115200"
 
   // Set LED pin as output
   pinMode(LED_PIN, OUTPUT);
